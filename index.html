@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Latin Declensions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=EB+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      background: #F7F0E0;
+      color: #1C1A14;
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 16px;
+    }
+
+    header {
+      background: #1C1A14;
+      color: #F7F0E0;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    header h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 2rem;
+      margin: 0;
+      letter-spacing: 0.06em;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #EDE0C4;
+      border-bottom: 2px solid #C4A882;
+    }
+    nav button {
+      font-family: 'Cinzel', serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.8rem 2rem;
+      border: none;
+      border-bottom: 3px solid transparent;
+      background: transparent;
+      color: #4A4538;
+      cursor: pointer;
+      margin-bottom: -2px;
+    }
+    nav button.active {
+      color: #8C1F28;
+      border-bottom-color: #8C1F28;
+      background: #F7F0E0;
+    }
+
+    main {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 3rem;
+    }
+
+    .panel { display: none; }
+    .panel.active { display: block; }
+
+    .panel h2 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.1rem;
+      color: #8C1F28;
+      margin: 0 0 1.5rem;
+      border-left: 3px solid #8C1F28;
+      padding-left: 0.8rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: #FDF8F0;
+      border: 1px solid #C4A882;
+      border-top: 3px solid #8C1F28;
+    }
+    .card-head {
+      background: #1C1A14;
+      color: #F7F0E0;
+      padding: 0.55rem 0.9rem;
+    }
+    .card-head .nom {
+      font-family: 'Cinzel', serif;
+      font-size: 1.1rem;
+    }
+    .card-head .eng {
+      font-size: 0.78rem;
+      color: #C4A882;
+      font-style: italic;
+    }
+    .card-head .gen {
+      float: right;
+      font-size: 0.65rem;
+      background: #8C1F28;
+      padding: 0.1rem 0.4rem;
+      margin-top: 0.2rem;
+      font-family: 'Cinzel', serif;
+      letter-spacing: 0.08em;
+    }
+
+    table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+    thead th {
+      font-family: 'Cinzel', serif;
+      font-size: 0.62rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #4A4538;
+      padding: 0.4rem 0.75rem;
+      background: #EDE0C4;
+      border-bottom: 1px solid #C4A882;
+      text-align: left;
+    }
+    tbody tr { border-bottom: 1px solid #DDD0B8; }
+    tbody tr:last-child { border-bottom: none; }
+    tbody td { padding: 0.38rem 0.75rem; }
+    tbody td:first-child {
+      font-family: 'Cinzel', serif;
+      font-size: 0.65rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: #4A4538;
+    }
+    .e { color: #8C1F28; font-weight: 500; }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.8rem;
+      color: #9A7B3A;
+      font-style: italic;
+      border-top: 1px solid #DDD0B8;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Latin Declensions</h1>
+</header>
+
+<nav>
+  <button class="active" onclick="show(1)">I · First</button>
+  <button onclick="show(2)">II · Second</button>
+  <button onclick="show(3)">III · Third</button>
+</nav>
+
+<main>
+
+  <!-- FIRST DECLENSION -->
+  <section id="p1" class="panel active">
+<div class="grid">
+
+      <div class="card">
+        <div class="card-head"><span class="gen">f.</span><div class="nom">puella</div><div class="eng">girl</div></div>
+        <table>
+          <thead><tr><th>Case</th><th>Sg.</th><th>Pl.</th></tr></thead>
+          <tbody>
+            <tr><td>Nom.</td><td>puell<span class="e">a</span></td><td>puell<span class="e">ae</span></td></tr>
+            <tr><td>Gen.</td><td>puell<span class="e">ae</span></td><td>puell<span class="e">ārum</span></td></tr>
+            <tr><td>Dat.</td><td>puell<span class="e">ae</span></td><td>puell<span class="e">īs</span></td></tr>
+            <tr><td>Acc.</td><td>puell<span class="e">am</span></td><td>puell<span class="e">ās</span></td></tr>
+            <tr><td>Abl.</td><td>puell<span class="e">ā</span></td><td>puell<span class="e">īs</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><span class="gen">f.</span><div class="nom">villa</div><div class="eng">house, farmhouse</div></div>
+        <table>
+          <thead><tr><th>Case</th><th>Sg.</th><th>Pl.</th></tr></thead>
+          <tbody>
+            <tr><td>Nom.</td><td>vill<span class="e">a</span></td><td>vill<span class="e">ae</span></td></tr>
+            <tr><td>Gen.</td><td>vill<span class="e">ae</span></td><td>vill<span class="e">ārum</span></td></tr>
+            <tr><td>Dat.</td><td>vill<span class="e">ae</span></td><td>vill<span class="e">īs</span></td></tr>
+            <tr><td>Acc.</td><td>vill<span class="e">am</span></td><td>vill<span class="e">ās</span></td></tr>
+            <tr><td>Abl.</td><td>vill<span class="e">ā</span></td><td>vill<span class="e">īs</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><span class="gen">f.</span><div class="nom">aqua</div><div class="eng">water</div></div>
+        <table>
+          <thead><tr><th>Case</th><th>Sg.</th><th>Pl.</th></tr></thead>
+          <tbody>
+            <tr><td>Nom.</td><td>aqu<span class="e">a</span></td><td>aqu<span class="e">ae</span></td></tr>
+            <tr><td>Gen.</td><td>aqu<span class="e">ae</span></td><td>aqu<span class="e">ārum</span></td></tr>
+            <tr><td>Dat.</td><td>aqu<span class="e">ae</span></td><td>aqu<span class="e">īs</span></td></tr>
+            <tr><td>Acc.</td><td>aqu<span class="e">am</span></td><td>aqu<span class="e">ās</span></td></tr>
+            <tr><td>Abl.</td><td>aqu<span class="e">ā</span></td><td>aqu<span class="e">īs</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><span class="gen">f.</span><div class="nom">vīta</div><div class="eng">life</div></div>
+        <table>
+          <thead><tr><th>Case</th><th>Sg.</th><th>Pl.</th></tr></thead>
+          <tbody>
+            <tr><td>Nom.</td><td>vīt<span class="e">a</span></td><td>vīt<span class="e">ae</span></td></tr>
+            <tr><td>Gen.</td><td>vīt<span class="e">ae</span></td><td>vīt<span class="e">ārum</span></td></tr>
+            <tr><td>Dat.</td><td>vīt<span class="e">ae</span></td><td>vīt<span class="e">īs</span></td></tr>
+            <tr><td>Acc.</td><td>vīt<span class="e">am</span></td><td>vīt<span class="e">ās</span></td></tr>
+            <tr><td>Abl.</td><td>vīt<span class="e">ā</span></td><td>vīt<span class="e">īs</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECOND DECLENSION -->
+  <section id="p2" class="panel">
+    <div class="grid">
+
+      <div class="card">
+        <div class="card-head"><span class="gen">m.</span><div class="nom">servus</div><div class="eng">slave, servant</div></div>
+        <table>
+          <thead><tr><th>Case</th><th>Sg.</th><th>Pl.</th></tr></thead>
+          <tbody>
+            <tr><td>Nom.</td><td>serv<span class="e">us</span></td><td>serv<span class="e">ī</span></td></tr>
+            <tr><td>Gen.</td><td>serv<span class="e">ī</span></td><td>serv<span class="e">ōrum</span></td></tr>
+            <tr><td>Dat.</td><td>serv<span class="e">ō</span></td><td>serv<span class="e">īs</span></td></tr>
+            <tr><td>Acc.</td><td>serv<span class="e">um</span></td><td>serv<span class="e">ōs</span></td></tr>
+            <tr><td>Abl.</td><td>serv<span class="e">ō</span></td><td>serv<span class="e">īs</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><span class="gen">m.</span><div class="nom">amīcus</div><div class="eng">friend</div></div>
+        <table>
+          <thead><tr><th>Case</th><th>Sg.</th><th>Pl.</th></tr></thead>
+          <tbody>
+            <tr><td>Nom.</td><td>amīc<span class="e">us</span></td><td>amīc<span class="e">ī</span></td></tr>
+            <tr><td>Gen.</td><td>amīc<span class="e">ī</span></td><td>amīc<span class="e">ōrum</span></td></tr>
+            <tr><td>Dat.</td><td>amīc<span class="e">ō</span></td><td>amīc<span class="e">īs</span></td></tr>
+            <tr><td>Acc.</td><td>amīc<span class="e">um</span></td><td>amīc<span class="e">ōs</span></td></tr>
+            <tr><td>Abl.</td><td>amīc<span class="e">ō</span></td><td>amīc<span class="e">īs</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><span class="gen">n.</span><div class="nom">dōnum</div><div class="eng">gift</div></div>
+        <table>
+          <thead><tr><th>Case</th><th>Sg.</th><th>Pl.</th></tr></thead>
+          <tbody>
+            <tr><td>Nom.</td><td>dōn<span class="e">um</span></td><td>dōn<span class="e">a</span></td></tr>
+            <tr><td>Gen.</td><td>dōn<span class="e">ī</span></td><td>dōn<span class="e">ōrum</span></td></tr>
+            <tr><td>Dat.</td><td>dōn<span class="e">ō</span></td><td>dōn<span class="e">īs</span></td></tr>
+            <tr><td>Acc.</td><td>dōn<span class="e">um</span></td><td>dōn<span class="e">a</span></td></tr>
+            <tr><td>Abl.</td><td>dōn<span class="e">ō</span></td><td>dōn<span class="e">īs</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><span class="gen">m.</span><div class="nom">dominus</div><div class="eng">lord, master</div></div>
+        <table>
+          <thead><tr><th>Case</th><th>Sg.</th><th>Pl.</th></tr></thead>
+          <tbody>
+            <tr><td>Nom.</td><td>domin<span class="e">us</span></td><td>domin<span class="e">ī</span></td></tr>
+            <tr><td>Gen.</td><td>domin<span class="e">ī</span></td><td>domin<span class="e">ōrum</span></td></tr>
+            <tr><td>Dat.</td><td>domin<span class="e">ō</span></td><td>domin<span class="e">īs</span></td></tr>
+            <tr><td>Acc.</td><td>domin<span class="e">um</span></td><td>domin<span class="e">ōs</span></td></tr>
+            <tr><td>Abl.</td><td>domin<span class="e">ō</span></td><td>domin<span class="e">īs</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- THIRD DECLENSION -->
+  <section id="p3" class="panel">
+<div class="grid">
+
+      <div class="card">
+        <div class="card-head"><span class="gen">m.</span><div class="nom">rēx</div><div class="eng">king</div></div>
+        <table>
+          <thead><tr><th>Case</th><th>Sg.</th><th>Pl.</th></tr></thead>
+          <tbody>
+            <tr><td>Nom.</td><td>rē<span class="e">x</span></td><td>rēg<span class="e">ēs</span></td></tr>
+            <tr><td>Gen.</td><td>rēg<span class="e">is</span></td><td>rēg<span class="e">um</span></td></tr>
+            <tr><td>Dat.</td><td>rēg<span class="e">ī</span></td><td>rēg<span class="e">ibus</span></td></tr>
+            <tr><td>Acc.</td><td>rēg<span class="e">em</span></td><td>rēg<span class="e">ēs</span></td></tr>
+            <tr><td>Abl.</td><td>rēg<span class="e">e</span></td><td>rēg<span class="e">ibus</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><span class="gen">f.</span><div class="nom">māter</div><div class="eng">mother</div></div>
+        <table>
+          <thead><tr><th>Case</th><th>Sg.</th><th>Pl.</th></tr></thead>
+          <tbody>
+            <tr><td>Nom.</td><td>māt<span class="e">er</span></td><td>mātr<span class="e">ēs</span></td></tr>
+            <tr><td>Gen.</td><td>mātr<span class="e">is</span></td><td>mātr<span class="e">um</span></td></tr>
+            <tr><td>Dat.</td><td>mātr<span class="e">ī</span></td><td>mātr<span class="e">ibus</span></td></tr>
+            <tr><td>Acc.</td><td>mātr<span class="e">em</span></td><td>mātr<span class="e">ēs</span></td></tr>
+            <tr><td>Abl.</td><td>mātr<span class="e">e</span></td><td>mātr<span class="e">ibus</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><span class="gen">m/f.</span><div class="nom">canis</div><div class="eng">dog</div></div>
+        <table>
+          <thead><tr><th>Case</th><th>Sg.</th><th>Pl.</th></tr></thead>
+          <tbody>
+            <tr><td>Nom.</td><td>can<span class="e">is</span></td><td>can<span class="e">ēs</span></td></tr>
+            <tr><td>Gen.</td><td>can<span class="e">is</span></td><td>can<span class="e">um</span></td></tr>
+            <tr><td>Dat.</td><td>can<span class="e">ī</span></td><td>can<span class="e">ibus</span></td></tr>
+            <tr><td>Acc.</td><td>can<span class="e">em</span></td><td>can<span class="e">ēs</span></td></tr>
+            <tr><td>Abl.</td><td>can<span class="e">e</span></td><td>can<span class="e">ibus</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><span class="gen">f.</span><div class="nom">urbs</div><div class="eng">city</div></div>
+        <table>
+          <thead><tr><th>Case</th><th>Sg.</th><th>Pl.</th></tr></thead>
+          <tbody>
+            <tr><td>Nom.</td><td>urb<span class="e">s</span></td><td>urb<span class="e">ēs</span></td></tr>
+            <tr><td>Gen.</td><td>urb<span class="e">is</span></td><td>urb<span class="e">ium</span></td></tr>
+            <tr><td>Dat.</td><td>urb<span class="e">ī</span></td><td>urb<span class="e">ibus</span></td></tr>
+            <tr><td>Acc.</td><td>urb<span class="e">em</span></td><td>urb<span class="e">ēs</span></td></tr>
+            <tr><td>Abl.</td><td>urb<span class="e">e</span></td><td>urb<span class="e">ibus</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>Red letters mark the inflectional ending · Macrons indicate long vowels</footer>
+
+<script>
+  function show(n) {
+    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
+    document.getElementById('p' + n).classList.add('active');
+    event.target.classList.add('active');
+  }
+</script>
+</body>
+</html>
