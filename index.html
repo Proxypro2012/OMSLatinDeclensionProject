@@ -129,6 +129,50 @@
     }
     .e { color: #8C1F28; font-weight: 500; }
 
+    /* ── CASES GUIDE ── */
+    .case-list { display: flex; flex-direction: column; gap: 1.2rem; }
+    .case-block {
+      background: #FDF8F0;
+      border: 1px solid #C4A882;
+      border-left: 4px solid #8C1F28;
+    }
+    .case-block-head {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      padding: 0.7rem 1rem 0.5rem;
+      border-bottom: 1px solid #EDE0C4;
+    }
+    .case-name {
+      font-family: 'Cinzel', serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #8C1F28;
+      min-width: 110px;
+    }
+    .case-question {
+      font-size: 0.85rem;
+      color: #4A4538;
+      font-style: italic;
+    }
+    .case-body { padding: 0.6rem 1rem 0.8rem; }
+    .case-body p { margin: 0 0 0.4rem; font-size: 0.95rem; line-height: 1.55; }
+    .case-body p:last-child { margin: 0; }
+    .case-examples {
+      margin-top: 0.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .ex {
+      background: #EDE0C4;
+      border: 1px solid #C4A882;
+      padding: 0.2rem 0.65rem;
+      font-size: 0.85rem;
+    }
+    .ex em { font-style: italic; color: #1C1A14; }
+    .ex span { color: #4A4538; font-size: 0.8rem; }
+
     footer {
       text-align: center;
       padding: 1rem;
@@ -149,6 +193,7 @@
   <button class="active" onclick="show(1)">I · First</button>
   <button onclick="show(2)">II · Second</button>
   <button onclick="show(3)">III · Third</button>
+  <button onclick="show('cases')">Cases Guide</button>
 </nav>
 
 <main>
@@ -342,9 +387,66 @@
     </div>
   </section>
 
+  <!-- CASES GUIDE -->
+  <section id="pcases" class="panel">
+    <div class="case-list">
+
+      <div class="case-block">
+        <div class="case-block-head">
+          <span class="case-name">Nominative</span>
+          <span class="case-question">The (noun)</span>
+        </div>
+        <div class="case-body">
+          <p>The nominative is the subject of the sentence, the noun doing the action. For example, <em>puella currit</em> means "the girl runs." <em>Puella</em> is nominative because she is the one doing the running.</p>
+        </div>
+      </div>
+
+      <div class="case-block">
+        <div class="case-block-head">
+          <span class="case-name">Genitive</span>
+          <span class="case-question">Of the (noun)</span>
+        </div>
+        <div class="case-body">
+          <p>The genitive shows possession or belonging. It is translated with "of the" or with an apostrophe-s. For example, <em>aqua villae</em> means "the water of the house," and <em>puella villae</em> means "the girl of the house."</p>
+        </div>
+      </div>
+
+      <div class="case-block">
+        <div class="case-block-head">
+          <span class="case-name">Dative</span>
+          <span class="case-question">To / for the (noun)</span>
+        </div>
+        <div class="case-body">
+          <p>The dative shows who receives something or who benefits from an action. It is translated with "to" or "for." For example, <em>aquam villae dat</em> means "he gives water to the house," and <em>vītam puellae dat</em> means "she gives life for the girl."</p>
+        </div>
+      </div>
+
+      <div class="case-block">
+        <div class="case-block-head">
+          <span class="case-name">Accusative</span>
+          <span class="case-question">The (noun) — direct object</span>
+        </div>
+        <div class="case-body">
+          <p>The accusative is the direct object, the noun receiving the action of the verb. For example, <em>puellam videt</em> means "he sees the girl," where <em>puellam</em> is the one being seen. It is also used after prepositions showing movement toward something, such as <em>ad villam</em>, "to the house."</p>
+        </div>
+      </div>
+
+      <div class="case-block">
+        <div class="case-block-head">
+          <span class="case-name">Ablative</span>
+          <span class="case-question">From · With · By · In · On</span>
+        </div>
+        <div class="case-body">
+          <p>The ablative is the most flexible case and covers a range of meanings. It can mean "from" as in <em>ex villā</em>, "out of the house." It can mean "with" as in <em>cum puellā</em>, "with the girl." It can mean "by" as in <em>aquā</em>, "by means of water." And it can mean "in" or "on" as in <em>in villā</em>, "in the house." The meaning depends on context and whether a preposition is used.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
 </main>
 
-<footer>Created by Ved Patel, Kabir Tiwari, and Cole Marsh</footer>
+<footer>Red letters mark the inflectional ending · Macrons indicate long vowels</footer>
 
 <script>
   function show(n) {
